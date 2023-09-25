@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | login</title>
+  </head>
+  <body>
+    <main class="contenido-exito">
+      <div class="info-exito">
+        <div class="imagen_exito">
+          <img src="assets/images/icon-success.svg" alt="check" />
+        </div>
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <b id="resultado"></b> Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+
+      <a href="index.html"><button class="botton">Dismiss message</button></a>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script>
+      const parametros = new URLSearchParams(window.location.search);
+      const email = parametros.get("email");
+     
+      // Construir el mensaje y mostrarlo en la etiqueta <p>
+      const mensaje = `${email}`;
+      document.getElementById("resultado").innerHTML = mensaje;
+     console.log(email);
+    </script>
+  </body>
+</html>
+
+<!-- Sign-up form end -->
+
+<!-- Success message start -->
+
+<!-- Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message -->
+
+<!-- Success message end -->
